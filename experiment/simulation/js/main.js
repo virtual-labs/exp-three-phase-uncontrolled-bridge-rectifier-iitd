@@ -1675,7 +1675,7 @@ concept_development: new Dom(".concept_development"),
 
 
         Scenes.items.big_helper.set(748, -34, 397, 170).zIndex(8).styles({filter: "brightness(200)"})
-        Scenes.items.helper_1.set(314, 13, 185, 59).opacity(0.85).zIndex(8)
+        Scenes.items.helper_1.set(314, 11, 115, 59).opacity(0.85).zIndex(8)
         Scenes.items.helper_2.set(410, 13, 140, 59).opacity(0.85).zIndex(8)
         Scenes.items.helper_3.set(500, 13, 167, 59).opacity(0.85).hide().zIndex(8)
         Scenes.items.helper_4.set(314, 125, 175, 59).opacity(0.85).zIndex(8)
@@ -2363,7 +2363,7 @@ concept_development: new Dom(".concept_development"),
 }
 
 // stepcalling
-Scenes.currentStep = 3
+Scenes.currentStep = 2
 
 Scenes.next()
 // Scenes.steps[3]()

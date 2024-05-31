@@ -9,7 +9,7 @@ Fig. 1. Circuit configuration of 3 phase uncontrolled full-bridge rectifier.
 
 </center>
 <br>
-The principle of operation of the above circuit can easily be understood from the waveforms given in Fig. 2. The output voltage of a full-bridge rectifier exhibits a six-pulse ripple DC output voltage. The diodes are sequentially numbered (D1, D2, D3, D4, D5 and D6) based on their conduction sequences, with each diode conducting for 120o duration. The diodes connected between the supply lines with the highest instantaneous line-to-line voltage will conduct.
+The principle of operation of the above circuit can easily be understood from the waveforms given in Fig. 2. The output voltage of a full-bridge rectifier exhibits a six-pulse ripple DC output voltage. The diodes are sequentially numbered (D<sub>1</sub>, D<sub>2</sub>, D<sub>3</sub>, D<sub>4</sub>, D<sub>5</sub> and D<sub>6</sub>) based on their conduction sequences, with each diode conducting for 120&#176; duration. The diodes connected between the supply lines with the highest instantaneous line-to-line voltage will conduct.
 <br>
 
 <center>
@@ -45,6 +45,7 @@ Simplifying the above equation
     ..(2)
 
 </div>
+<br>
 
 <div style="float: left; width:100%;"><br>
 Average load current is given by
@@ -57,11 +58,11 @@ Average load current is given by
     ..(3)
 
 </div>
-
+<br>
 
 <div style="float: left; width:100%;"><br>
 where,
-<br><br>
+<br>
 </div>
 
 <div style="float: left; width:50%;">
@@ -71,6 +72,7 @@ where,
     ..(4)
 
 </div>
+<br>
 
 <div style="float: left; width:100%;"><br>
 Each diode conducts for 120&#176;. Hence, the average current through diode can easily be obtained as
@@ -100,7 +102,7 @@ On simplifying the above equation
 
 <div style="float: left; width:100%;"><br>
 Similarly, the RMS current through each diode can be given by
-<br><br>
+<br>
 </div>
 
 
@@ -112,8 +114,10 @@ Similarly, the RMS current through each diode can be given by
 
 </div>
 <br>
-<div style="float: left; width:100%;">
+
+<div style="float: left; width:100%;"><br>
 On simplifying the above equation
+<br>
 </div>
 
 <div style="float: left; width:50%;">
@@ -124,8 +128,10 @@ On simplifying the above equation
 
 </div>
 <br>
-<div style="float: left; width:100%;">
+
+<div style="float: left; width:100%;"><br>
 The RMS source current can easily be obtained as
+<br>
 </div>
 
 <div style="float: left; width:50%;">
@@ -137,9 +143,9 @@ The RMS source current can easily be obtained as
 </div>
 <br>
 
-<div style="float: left; width:100%;">
+<div style="float: left; width:100%;"><br>
 On simplifying the above equation
-
+<br>
 </div>
 
 <div style="float: left; width:50%;">
@@ -150,9 +156,10 @@ On simplifying the above equation
 
 </div>
 <br>
-<br>
-<div style="float: left; width:100%;">
+
+<div style="float: left; width:100%;"><br>
 The RMS value of fundamental current is
+<br>
 </div>
 
 <div style="float: left; width:50%;">
@@ -163,9 +170,10 @@ The RMS value of fundamental current is
 
 </div>
 <br>
-<br>
-<div style="float: left; width:100%;">
+
+<div style="float: left; width:100%;"><br>
 and the power factor is given by
+<br>
 </div>
 
 <div style="float: left; width:50%;">

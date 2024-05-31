@@ -67,6 +67,7 @@ const src = {
       helper_5:this.allImgsDom[index++],
       helper_6:this.allImgsDom[index++],
       btn_proceed:this.allImgsDom[index++],
+      part_2_components_helper:this.allImgsDom[index++],
       
       //! EE13 images end here
 

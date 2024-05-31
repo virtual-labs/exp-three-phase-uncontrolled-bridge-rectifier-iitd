@@ -271,6 +271,7 @@ const setIsProcessRunning = (value) => {
   isRunning = value;
   if(value){
     Dom.hideAll()
+    window.speechSynthesis.cancel()
   }
 };
 
@@ -937,6 +938,7 @@ btn_reset_connections: new Dom(".btn-connections"),
     helper_5 : new Dom("helper_5"),
     helper_6 : new Dom("helper_6"),
     btn_proceed : new Dom("btn_proceed"),
+    part_2_components_helper: new Dom("part_2_components_helper"),
 
 //!  EE13 images end here
 
@@ -1650,7 +1652,11 @@ concept_development: new Dom(".concept_development"),
 
       //! Required Items
 
-      Scenes.items.part_2_components.set(0, -63, 453, 934)
+      Scenes.items.part_2_components.set(0, -63, 453, 934).zIndex(5)
+      Scenes.items.part_2_components_helper.set(0, -63, 453, 934).zIndex(9)
+      let part_2_graph_helper_white = Scenes.items.tempTitle11.set(688,-39,431,248).styles({
+        backgroundColor: "white",
+      }).zIndex(4)
       Scenes.items.btn_proceed.set(55, 342 ,67).zIndex(1)
       Dom.setBlinkArrowRed(true,179, 312,30,30,-90).play()
       setCC("Proceed further to understand the  principle of operation by observing various current waveforms")
@@ -1661,25 +1667,25 @@ concept_development: new Dom(".concept_development"),
       setCC("In the next 60 degrees time duration diode D5 turns off while diode D1 starts conducting.")
 
       //! onclick for proceed btn
-      let btn_proceed = Scenes.items.btn_proceed
+      let btn_proceed = Scenes.items.btn_proceed.zIndex(10)
       btn_proceed.item.onclick = ()=>{
         Scenes.items.btn_proceed.hide()
-        Scenes.items.btn_next_mode.set(55, 358 ,40).zIndex(1)
+        Scenes.items.btn_next_mode.set(55, 358 ,40).zIndex(10)
         Dom.setBlinkArrowRed(true,121, 321,30,30,-90).play()
 
 
-        Scenes.items.big_helper.set(748, -34, 397, 170)
-        Scenes.items.helper_1.set(314, 13, 103, 59).opacity(0.85)
-        Scenes.items.helper_2.set(410, 13, 103, 59).opacity(0.85)
-        Scenes.items.helper_3.set(500, 13, 103, 59).opacity(0.85).hide()
-        Scenes.items.helper_4.set(314, 195, 103, 59).opacity(0.85)
-        Scenes.items.helper_5.set(410, 195, 103, 59).opacity(0.85).hide()
-        Scenes.items.helper_6.set(496, 195, 103, 59).opacity(0.85)
+        Scenes.items.big_helper.set(748, -34, 397, 170).zIndex(8).styles({filter: "brightness(200)"})
+        Scenes.items.helper_1.set(314, 13, 185, 59).opacity(0.85).zIndex(8)
+        Scenes.items.helper_2.set(410, 13, 140, 59).opacity(0.85).zIndex(8)
+        Scenes.items.helper_3.set(500, 13, 167, 59).opacity(0.85).hide().zIndex(8)
+        Scenes.items.helper_4.set(314, 125, 175, 59).opacity(0.85).zIndex(8)
+        Scenes.items.helper_5.set(410, 155, 145, 59).opacity(0.85).hide().zIndex(8)
+        Scenes.items.helper_6.set(496, 189, 111, 59).opacity(0.85).zIndex(8)
 
       }
       
        //! onclick for reset button
-       let btn_reset = Scenes.items.btn_restart_operation
+       let btn_reset = Scenes.items.btn_restart_operation.zIndex(11)
         btn_reset.item.onclick = function(){
           sliders.resetSlidersValue()
           Scenes.steps[3]()
@@ -1748,7 +1754,7 @@ concept_development: new Dom(".concept_development"),
         if(idx == 4){
           Dom.setBlinkArrowRed(-1)
           setCC("For better understanding of principle of operation, here all current waveforms are shown for one input ac cycle.")
-          Scenes.items.btn_restart_operation.set(55, 358 ,40).zIndex(1)
+          Scenes.items.btn_restart_operation.set(55, 358 ,40).zIndex(11)
           // after complete
           Dom.setBlinkArrow(true, 790, 408).play()
           setCC("Click 'Next' to go to next step")
@@ -1946,7 +1952,7 @@ concept_development: new Dom(".concept_development"),
             "Vo",
             "Io",
             "Id_avg",
-            "Iin_avg",
+            "Iin_rms",
             "PF",
           ],
           colors: [
@@ -2178,6 +2184,7 @@ concept_development: new Dom(".concept_development"),
         if(recordBtnClickIdx==0){
           // disableSlider("reset")
         }
+        valuesToMatch.pop()
       }
 
       //! onclick for reset 
@@ -2267,6 +2274,8 @@ concept_development: new Dom(".concept_development"),
 
           // ! Graph Tab Buttons click
           function graphTabButtonArrows(){
+            window.speechSynthesis.cancel()
+            setCC("")
             Dom.setBlinkArrowRed(true,610,85,30,null,90).play()
             setCC("Plot output voltage variation with AC voltage characteristics")
             // refer to plotGraphs() area
@@ -2354,7 +2363,7 @@ concept_development: new Dom(".concept_development"),
 }
 
 // stepcalling
-Scenes.currentStep = 2
+Scenes.currentStep = 3
 
 Scenes.next()
 // Scenes.steps[3]()

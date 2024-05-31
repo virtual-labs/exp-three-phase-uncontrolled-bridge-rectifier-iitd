@@ -26,7 +26,7 @@ Average voltage appearing across load is defined by
 
 <br>
 <div style="float: left; width:50%;">
-  <img src="images/th3.png" height="76px">
+  <img src="images/th3.png" height="80px">
 </div>
 <div style="float: right; width:50%; text-align:center;">
     ..(1)
@@ -39,7 +39,7 @@ Simplifying the above equation
 </div>
 
 <div style="float: left; width:50%;">
-  <img src="images/th4.png" height="76px">
+  <img src="images/th4.png" height="80px">
       </div>
 <div style="float: right; width:50%; text-align:center;">
     ..(2)
@@ -51,7 +51,7 @@ Average load current is given by
 </div><br>
 
 <div style="float: left; width:50%;">
-  <img src="images/th5.png" height="90px">
+  <img src="images/th5.png" height="80px">
       </div>
 <div style="float: right; width:50%; text-align:center;">
     ..(3)
@@ -65,7 +65,7 @@ where,
 </div>
 
 <div style="float: left; width:50%;">
-  <img src="images/th6.png" height="48px">
+  <img src="images/th6.png" height="44px">
       </div>
 <div style="float: right; width:50%; text-align:center;">
     ..(4)
@@ -77,7 +77,7 @@ Each diode conducts for 120&#176;. Hence, the average current through diode can 
 </div><br>
 
 <div style="float: left; width:50%;">
-  <img src="images/th7.png" height="65px">
+  <img src="images/th7.png" height="80px">
       </div>
 <div style="float: right; width:50%; text-align:center;">
     ..(5)
@@ -105,7 +105,7 @@ Similarly, the RMS current through each diode can be given by
 
 
 <div style="float: left; width:50%;">
-  <img src="images/th9.png" height="75px">
+  <img src="images/th9.png" height="80px">
       </div>
 <div style="float: right; width:50%; text-align:center;">
     ..(7)
@@ -117,7 +117,7 @@ On simplifying the above equation
 </div>
 
 <div style="float: left; width:50%;">
-  <img src="images/th10.png" height="42px">
+  <img src="images/th10.png" height="70px">
       </div>
 <div style="float: right; width:50%; text-align:center;">
     ..(8)
@@ -129,7 +129,7 @@ The RMS source current can easily be obtained as
 </div>
 
 <div style="float: left; width:50%;">
-  <img src="images/th11.png" height="42px">
+  <img src="images/th11.png" height="80px">
       </div>
 <div style="float: right; width:50%; text-align:center;">
     ..(9)
@@ -156,7 +156,7 @@ The RMS value of fundamental current is
 </div>
 
 <div style="float: left; width:50%;">
-  <img src="images/th13.png" height="75px">
+  <img src="images/th13.png" height="80px">
       </div>
 <div style="float: right; width:50%; text-align:center;">
     ..(11)
@@ -169,7 +169,7 @@ and the power factor is given by
 </div>
 
 <div style="float: left; width:50%;">
-  <img src="images/th14.png" height="75px">
+  <img src="images/th14.png" height="76px">
       </div>
 <div style="float: right; width:50%; text-align:center;">
     ..(12)

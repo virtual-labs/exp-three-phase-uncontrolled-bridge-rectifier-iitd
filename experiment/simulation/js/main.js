@@ -1883,7 +1883,8 @@ concept_development: new Dom(".concept_development"),
       function stepTutorial2(){
 
         Dom.setBlinkArrowRed(true,155, 63,30,null,-90).play()
-        setCC("Select the load parameters")
+          setCC("Here, experimental observations need to be obtained by choosing load and setting different AC input voltages.")
+          // setCC("Select the load parameters")
         
     
 
@@ -2057,7 +2058,7 @@ concept_development: new Dom(".concept_development"),
                 Scenes.currentStep = 4
               }, 12000);
               // showArrowForAll()
-              setCC("In AC voltage controller the waveform distortion is more at higher AC voltages and thus THD is high.")
+              setCC("In diode bridge rectifier the input power factor is independent of load and it is constant.")
             },
             arrows: [
               ()=>Dom.setBlinkArrowRed(true,680,85,30,null,90).play(),
@@ -2070,7 +2071,7 @@ concept_development: new Dom(".concept_development"),
               "The DC load current increases with increase in ac input voltage.",
               "",
               "The ac source current and its fundamental component increases with increase in ac input voltage.",
-              "In diode bridge rectifier the input power factor is independent of load and it is constant."
+
             ]
           }
           let btns = [
@@ -2223,8 +2224,8 @@ concept_development: new Dom(".concept_development"),
         // for arrow system
          if(recordBtnClickIdx >= 0 && recordBtnClickIdx < 6){
           Dom.setBlinkArrowRed(true,125, -36,30, null,-90).play()
-          setCC("Set AC input voltage.")
-        }else{
+          setCC("Change the input voltage.")
+        }else if(recordBtnClickIdx == 6 ){
           Dom.setBlinkArrowRed(true,640, 325,null,null,-90).play()
           setCC("Press the 'Record' Button")
         }
@@ -2277,7 +2278,7 @@ concept_development: new Dom(".concept_development"),
             window.speechSynthesis.cancel()
             setCC("")
             Dom.setBlinkArrowRed(true,610,85,30,null,90).play()
-            setCC("Plot output voltage variation with AC voltage characteristics")
+            setCC("Here, experimental observations need to be obtained by choosing load and setting different AC input voltages.")
             // refer to plotGraphs() area
           }
           graphTabButtonArrows()

@@ -1186,6 +1186,7 @@ concept_development: new Dom(".concept_development"),
 
       setCC("A three phase uncontrolled diode rectifier is shown here. It has six diodes which are connected to form a bridge rectifier.")
       setCC("AC input voltage is adjusted through a three phase autotransformer. Load is R-L type.")
+      setCC("Connect the components to form a 3-phase uncontrolled bridge rectifier")
 
 
       let vertexBox = new Dom(".vertex-box")
@@ -1196,7 +1197,22 @@ concept_development: new Dom(".concept_development"),
       Scenes.items.btn_reset.set(820, -36, 42).zIndex(1)
       Scenes.items.btn_check.set(820, 10, 42).zIndex(1)
 
-  
+      let st = {
+        backgroundColor: "#c00000",
+          fontSize: "1.2rem",
+          padding: "2px",
+          textShadow: "1px 2px #c00000"
+      }
+
+      Scenes.items.tempTitle10.setContent("Connect the components to form a 3-phase uncontrolled bridge rectifier").set(94, 6, 57, 357).styles(st)
+
+      anime({
+        targets: Scenes.items.tempTitle10.item,
+        scale: [1, 1.1],
+        easing: "linear",
+        loop: true,
+      })
+      
       // connected vertex src and dest
       let allConnectedVertexSrcDest = {}
 

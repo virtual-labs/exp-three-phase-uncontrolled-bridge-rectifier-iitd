@@ -357,8 +357,11 @@ function setCC(text = null, speed = 25) {
       // }
     }
   });
-  if (!isMute) textToSpeach(text);
-  return ccDom;
+  let utterance = null
+  if (!isMute){
+    utterance = textToSpeach(text);
+  } 
+  return utterance;
 }
    
 
@@ -1051,6 +1054,7 @@ concept_development: new Dom(".concept_development"),
   intru: null,
   intruVoice: null,
   optionsDone:[0,0,0,0],
+  currentLoad: 1,
   steps: [
     (intro = () => {
       // remove all dom element for back and setProcessRunning
@@ -1225,7 +1229,7 @@ concept_development: new Dom(".concept_development"),
           setCC("Connections are correct. Proceed for experimentation")
 
           // * destroy all the connection
-             
+          
           
           //to go to next step 
           setCC("Click 'Next' to go to next step");
@@ -1842,6 +1846,9 @@ concept_development: new Dom(".concept_development"),
 
       // ! onclick for load selecting buttons
       Scenes.items.part_3_option_1_load_1.item.onclick = ()=>{
+        if(Scenes.currentLoad == 2){
+          return
+        }
         resistanceValue = 10
         inductanceValue = 40
         isLoadAndInductanceSelected = true
@@ -1865,6 +1872,9 @@ concept_development: new Dom(".concept_development"),
         // setCC("Press the 'Record' Button")
       }
       Scenes.items.part_3_option_1_load_2.item.onclick = ()=>{
+        if(Scenes.currentLoad == 1){
+          return
+        }
         resistanceValue = 20
         inductanceValue = 40
         isLoadAndInductanceSelected = true
@@ -1898,12 +1908,17 @@ concept_development: new Dom(".concept_development"),
       // Dom.setBlinkArrowRed(true,0,0,30,null,-90)
       function stepTutorial2(){
 
-        Dom.setBlinkArrowRed(true,155, 63,30,null,-90).play()
-          setCC("Here, experimental observations need to be obtained by choosing load and setting different AC input voltages.")
-          // setCC("Select the load parameters")
+        // * for different load
+        if(Scenes.currentLoad == 1){
+          Dom.setBlinkArrowRed(true,85, 63,30,null,-90).play()
+        }
+        else{
+          Dom.setBlinkArrowRed(true,225, 63,30,null,-90).play()
+        }
         
-    
-
+        setCC("Here, experimental observations need to be obtained by choosing load and setting different AC input voltages.")
+        // setCC("Select the load parameters")
+        
         // reset slider d onclick
         sliders.v_knob.onclick = ()=>{
           sliders.sliderV(()=>{
@@ -2067,14 +2082,18 @@ concept_development: new Dom(".concept_development"),
                 // rightTicks[i].opacity(1)
               }
               Dom.setBlinkArrowRed(-1)
-              setTimeout(() => {
-                setCC("Simulation Done");
-                // Dom.setBlinkArrow(true, 790, 544).play();
-                // setIsProcessRunning(false);
-                Scenes.currentStep = 4
-              }, 12000);
               // showArrowForAll()
-              setCC("In diode bridge rectifier the input power factor is independent of load and it is constant.")
+              if(Scenes.currentLoad == 2){
+                setCC("In diode bridge rectifier the input power factor is independent of load and it is constant.").onend = ()=>{
+                  setCC("Simulation Done");
+                  Scenes.currentStep = 4
+                }
+              }else{
+                setCC("In diode bridge rectifier the input power factor is independent of load and it is constant.").onend = ()=>{
+                  Dom.setBlinkArrowRed(true,867, 328,30,null,-90).play()
+                  setCC("Press reset button to get the performance with other load.")
+                }
+              }
             },
             arrows: [
               ()=>Dom.setBlinkArrowRed(true,680,85,30,null,90).play(),
@@ -2220,6 +2239,12 @@ concept_development: new Dom(".concept_development"),
         // reset all the parameters
         // so just simply call this step again
         // sliders.reset()
+
+        if(Scenes.currentLoad == 2){
+          Scenes.currentLoad = 1
+        }else if(Scenes.currentLoad == 1){
+          Scenes.currentLoad = 2
+        }
 
         // reset load parameters
         Scenes.items.part_3_option_1_load_1.removeClass("load-active")

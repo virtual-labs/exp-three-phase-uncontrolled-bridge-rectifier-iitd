@@ -50,7 +50,7 @@
       },
       "explanations": {
         "a": "Explanation 1",
-        "b": "Explanation 2: <img src='images/expl1.png' height='60px'>",
+        "b": "Explanation 2: <img src='images/expl1.png' height='45px'>",
         "c": "Explanation 3",
         "d": "Explanation 4"
       },

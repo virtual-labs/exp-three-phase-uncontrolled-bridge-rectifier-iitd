@@ -23,3 +23,7 @@ c) Performance analysis of the circuit:
 2. Change the source voltage and click on “RECORD” button to fill the table.
 
 3. Click on respective “ICONS” to see the various plots for performance analysis.
+
+<center>
+  <img src="images/proced1.png" height="220px">
+</center>

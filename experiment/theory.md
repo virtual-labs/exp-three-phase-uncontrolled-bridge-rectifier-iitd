@@ -11,6 +11,9 @@ Fig. 1. Circuit configuration of 3 phase uncontrolled full-bridge rectifier.
 <br>
 The principle of operation of the above circuit can easily be understood from the waveforms given in Fig. 2. The output voltage of a full-bridge rectifier exhibits a six-pulse ripple DC output voltage. The diodes are sequentially numbered (D<sub>1</sub>, D<sub>2</sub>, D<sub>3</sub>, D<sub>4</sub>, D<sub>5</sub> and D<sub>6</sub>) based on their conduction sequences, with each diode conducting for 120&#176; duration. The diodes connected between the supply lines with the highest instantaneous line-to-line voltage will conduct.
 <br>
+Highly inductive load [3] is considered for the analysis of 3 phase uncontrolled rectifier. According to the inherent property of inductor, it doesn’t allow sudden change in current through it. Hence the pulsating output DC current get smooth DC (approximately) for highly inductive load as considered and shown in waveforms below.
+
+<br>
 
 <center>
   <img src="images/th2.png" height="900px">

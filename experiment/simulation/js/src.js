@@ -95,8 +95,9 @@ const src = {
       val_r:this.allImgsDom[index++],
       val_v:this.allImgsDom[index++],
       circle:this.allImgsDom[index++],
+      formulas_procedure_slider_1: this.allImgsDom[index++],
 
-      
+
       //! EE13 images end here
 
 

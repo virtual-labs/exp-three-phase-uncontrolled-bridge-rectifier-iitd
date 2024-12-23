@@ -2,37 +2,98 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
-      "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+
+      "question": "Answer the questions given below (refer Fig.1):<br> <center> <img src='images/pre1.png' height='300px'><br><br>Fig. 1. Circuit configuration of 3-Phase Uncontrolled Rectifier.</center><br><br> 1. What is the function of a three-phase rectifier?",
+      "answers": {        
+        "a": "To convert AC voltage to DC voltage",
+        "b": "To convert DC voltage to AC voltage",
+        "c": "To increase the input AC voltage magnitude",
+        "d": "To decrease the input AC voltage magnitude"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "a": "Explanation 1: Rectifier converts the AC input voltage into DC output voltage.",
         "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "c": "Explanation 3",
+        "d": "Explanation 4"
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
+      
     {
-      "question": "This is a Sample Question 2?",
+
+      "question": "2. The conduction angle of each diode in 3-phase uncontrolled bridge rectifier is:",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "60 Degrees",
+        "b": "90 Degrees",
+        "c": "120 Degrees",
+        "d": "180 Degrees"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "a": "Explanation 1",
         "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "c": "Explanation 3: Each diode is forward biased for 120 degrees and hence it conducts in that duration.",
+        "d": "Explanation 4"
       },
       "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    
+    {
+
+      "question": "3. What is the peak –to- peak ripple in DC output voltage of a 3-phase full-bridge uncontrolled rectifier?",
+      "answers": {
+        "a": "0.866 V<sub>m,L-L</sub>",
+        "b": "0.1339 V<sub>m,L-L</sub>",
+        "c": "0.707 V<sub>m,L-L</sub>",
+        "d": "V<sub>m,L-L</sub>"
+      },
+      "explanations": {
+        "a": "Explanation 1",
+        "b": "Explanation 2: <img src='images/expl1.png' height='45px'>",
+        "c": "Explanation 3",
+        "d": "Explanation 4"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+        
+    {
+
+      "question": "4. What will be the effect of using highly resistive load in place of highly inductive load?",
+      "answers": {
+        "a": "Output DC voltage will be ripple free",
+        "b": "Output DC current will be pulsating in nature",
+        "c": "Output current will be AC in nature",
+        "d": "Output voltage will be AC in nature"
+      },
+      "explanations": {
+        "a": "Explanation 1",
+        "b": "Explanation 2: With resistive load the output current will be pulsating in nature.",
+        "c": "Explanation 3",
+        "d": "Explanation 4"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    
+    {
+      
+
+      "question": "5. Negative DC output voltage can easily be obtained by",
+      "answers": {
+        "a": "Reversing the input AC voltage ",
+        "b": "Change in the phase sequence of AC input voltage",
+        "c": "Reversing the diodes (D<sub>4</sub>, D<sub>6</sub> and D<sub>2</sub>) direction",
+        "d": "Reversing all six diodes direction"
+      },
+      "explanations": {
+        "a": "Explanation 1",
+        "b": "Explanation 2",
+        "c": "Explanation 3",
+        "d": "Explanation 4: Reversing all six diodes direction."
+      },
+      "correctAnswer": "d",
       "difficulty": "beginner"
     }
   ]

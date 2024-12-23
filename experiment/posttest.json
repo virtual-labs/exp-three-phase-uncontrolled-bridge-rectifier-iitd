@@ -2,37 +2,98 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+
+      "question": "Answer the questions given below (refer Fig. 2):<br> <center> <img src='images/pos1.png' height='300px'><br><br>Fig. 2. Circuit configuration of 3-Phase Uncontrolled Rectifier.</center><br><br> 1. What will be the average DC voltage if 200 V, line-to-line rms input AC voltage is given to a 3-phase uncontrolled full-bridge rectifier?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "230 V",
+        "b": "250 V",
+        "c": "270 V",
+        "d": "282 V"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "a": "Explanation 1",
         "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "c": "Explanation 3: <img src='images/expl2.png' height='60px'>",
+        "d": "Explanation 4"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+
+    {
+
+      "question": "2. What will be the average DC current if 200 V, line-to-line rms input voltage is given to a 3-phase uncontrolled full-bridge rectifier having a load of 15 ohm, 50 mH which are in series.",
+      "answers": {
+        "a": "15.33 A",
+        "b": "16.67 A",
+        "c": "18 A",
+        "d": "18.8 A"
+      },
+      "explanations": {
+        "a": "Explanation 1",
+        "b": "Explanation 2",
+        "c": "Explanation 3: <img src='images/expl3.png' height='60px'>",
+        "d": "Explanation 4"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+
+    { 
+   
+      "question": "3. While connecting the 3-phase source to 3-phase uncontrolled bridge-rectifier the phase sequence of the supply gets changed. What will be the effect on output voltage?",
+      "answers": {
+        "a": "Output voltage will be same.",
+        "b": "Polarity of output voltage will be reversed.",
+        "c": "Output voltage will be half of the original voltage ",
+        "d": "Output voltage will be zero"
+      },
+      "explanations": {
+        "a": "Explanation 1: Phase sequence does not affect the load voltage.",
+        "b": "Explanation 2",
+        "c": "Explanation 3",
+        "d": "Explanation 4"
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
+    
     {
-      "question": "This is a Sample Question 2?",
+
+      "question": "4. What will be the peak inverse voltage of diodes of 3-phase uncontrolled full-bridge rectifier?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        
+        "a": "0.955 V<sub>DC</sub>",
+        "b": "V<sub>DC</sub>",
+        "c": "1.05 V<sub>DC</sub>",
+        "d": "0.86 V<sub>DC</sub>"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "a": "Explanation 1",
         "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "c": "Explanation 3: <img src='images/expl4.png' height='60px'>",
+        "d": "Explanation 4"
       },
       "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+            
+    {
+
+      "question": "5. What is the power factor for three-phase uncontrolled full bridge rectifier?",
+      "answers": {
+        "a": "0.9549",
+        "b": "0.9352",
+        "c": "0.9728",
+        "d": "0.8872"
+      },
+      "explanations": {
+        "a": "Explanation 1: <img src='images/expl5.png' height='60px'>",
+        "b": "Explanation 2",
+        "c": "Explanation 3",
+        "d": "Explanation 4"
+      },
+      "correctAnswer": "a",
       "difficulty": "beginner"
     }
   ]
